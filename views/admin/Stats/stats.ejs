@@ -49,6 +49,23 @@
     });
     }
 
+    //here i want to fetch data from get methord with "/stats" and then i want to use that data to show in the chart
+ 
+            fetch('/stats', { method: 'GET' })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log(data);
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+    
+
     const years = ['2018', '2019', '2020', '2021'];
     const placementRates = [70, 80, 75, 90];
     const averageSalaries = [50000, 55000, 60000, 65000];

@@ -115,6 +115,10 @@ const resumeRouter = require('../routes/resume')
 
 app.use(resumeRouter)
 
+const statsRouter = require('../routes/stats')
+
+app.use(statsRouter)
+
 
 const errorRouter = require('../routes/404')
 
